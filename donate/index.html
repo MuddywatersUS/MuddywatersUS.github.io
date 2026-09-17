@@ -26,21 +26,28 @@
         .qr-wx { color: #07c160; }
         .qr-zfb { color: #1677ff; }
 
-        /* 说明与按钮 */
+        /* 说明与主按钮 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
         .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
         .btn-submit:hover { background: #0052cc; }
-        .footer-tips { font-size: 11px; color: #999; margin-top: 12px; }
+
+        /* 新增：二次访问/快捷获取通道样式 */
+        .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
+        .btn-group { display: flex; gap: 8px; margin-top: 8px; }
+        .btn-copy { flex: 1; padding: 9px 4px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; }
+        .btn-direct { flex: 1; padding: 9px 4px; background: #1677ff; color: #fff; text-align: center; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 12px; }
+
+        .footer-tips { font-size: 11px; color: #999; margin-top: 14px; }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- 1. 顶部头像（优先读取 avatar.jpg，若未上传则自动回退显示 wx.jpg） -->
+        <!-- 1. 顶部头像 -->
         <img src="avatar.jpg" class="avatar" alt="浑水摸鱼清源" onerror="this.src='wx.jpg'">
         <h1>浑水摸鱼清源 🥤</h1>
         <p class="subtitle">感谢大家一路以来的真金白银与信任！<br>投资是一场长坡厚雪的旅程，希望能陪伴大家喝着可乐慢慢变富。</p>
         
-        <!-- 2. 微信号显示（替换这里的“你的微信号”） -->
+        <!-- 2. 微信号显示 -->
         <div class="contact-box">
             💬 交流 / 合作微信号：<span class="wechat-tag">Muddy-the-waters</span>
         </div>
@@ -67,10 +74,31 @@
             2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
         </div>
 
-        <!-- 3. 替换为第一步复制的新腾讯文档链接 -->
+        <!-- 3. 新腾讯文档表单链接 -->
         <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
         
+        <!-- 4. 新增：二次访问/没记下提取码的快捷通道 -->
+        <div class="quick-access">
+            📌 <strong>二次访问 / 没记下提取码？</strong><br>若你之前已经登记过，无需重复填表，直接使用快捷通道：
+            <div class="btn-group">
+                <button onclick="copyCode()" class="btn-copy">📋 复制链接与提取码</button>
+                <a href="https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw" target="_blank" class="btn-direct">🚀 直达百度网盘</a>
+            </div>
+        </div>
+
         <p class="footer-tips">赞助纯属自愿，无论是否打赏均可免费领取资料</p>
     </div>
+
+    <!-- 复制脚本 -->
+    <script>
+    function copyCode() {
+        const text = "【AI Brooks 价格行为学交易课】全套资料：\n链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw\n提取码：PRIC";
+        navigator.clipboard.writeText(text).then(() => {
+            alert("已复制成功！提取码为：PRIC");
+        }).catch(() => {
+            alert("提取码：PRIC \n链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw");
+        });
+    }
+    </script>
 </body>
 </html>
