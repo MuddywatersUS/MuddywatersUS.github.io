@@ -31,7 +31,7 @@
         .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
         .btn-submit:hover { background: #0052cc; }
 
-        /* 新增：二次访问/快捷获取通道样式 */
+        /* 二次访问/快捷获取通道样式 */
         .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
         .btn-group { display: flex; gap: 8px; margin-top: 8px; }
         .btn-copy { flex: 1; padding: 9px 4px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; }
@@ -89,11 +89,12 @@
         <p class="footer-tips">赞助纯属自愿，无论是否打赏均可免费领取资料</p>
     </div>
 
-    <!-- 复制功能核心脚本 -->
+    <!-- 复制功能核心脚本（采用弹窗保底，杜绝手机/微信浏览器拦截失效） -->
     <script>
     function copyCode() {
-        const text = "【AI Brooks 价格行为学交易课】全套资料：\n链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw\n提取码：PRIC";
+        const text = "【AI Brooks 价格行为学交易课】\n网盘链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw\n提取码：PRIC";
         
+        // 尝试自动复制
         const textarea = document.createElement("textarea");
         textarea.value = text;
         textarea.style.position = "fixed";
@@ -103,17 +104,14 @@
         textarea.select();
 
         try {
-            const successful = document.execCommand('copy');
-            if (successful) {
-                alert("已复制成功！\n\n【AI Brooks 价格行为学交易课】\n链接及提取码已成功复制到剪贴板，可直接去网盘粘贴使用。");
-            } else {
-                alert("提取码：PRIC\n链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw");
-            }
+            document.execCommand('copy');
         } catch (err) {
-            alert("提取码：PRIC\n链接：https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw");
+            // 忽略错误
         }
-
         document.body.removeChild(textarea);
+
+        // 无论浏览器是否拦截自动复制，都弹出一个输入框供用户稳妥长按复制
+        prompt("已为您生成提取信息，请在下方框中长按全选并复制：", text);
     }
     </script>
 </body>
