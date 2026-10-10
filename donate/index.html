@@ -16,34 +16,21 @@
         .contact-box { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 8px 14px; font-size: 13px; color: #475569; margin-bottom: 20px; display: inline-block; }
         .wechat-tag { background: #e2e8f0; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: bold; color: #0f172a; margin-left: 4px; }
 
-        /* 赞助二维码区域（弱化，往下放或低调展示） */
-        .sponsor-box { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 14px 12px; margin-bottom: 18px; }
-        .sponsor-title { font-size: 13px; font-weight: 600; color: #666; margin-bottom: 10px; }
-        .qr-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .qr-item { flex: 1; min-width: 130px; max-width: 150px; background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
-        .qr-item img { width: 100%; height: auto; border-radius: 6px; display: block; }
-        .qr-label { font-size: 11px; font-weight: 600; margin-top: 6px; }
-        .qr-wx { color: #07c160; }
-        .qr-zfb { color: #1677ff; }
-
         /* --- 变现核心推荐卡片样式 --- */
         .tool-card { background: #131722; border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; text-align: left; color: #d1d4dc; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #2a2e39; }
         .tool-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
         .tool-title { font-size: 15px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 6px; }
         
-        /* 变现标签高亮设计 */
         .tool-badge-tv { background: rgba(41, 98, 255, 0.25); color: #4b89ff; border: 1px solid rgba(41, 98, 255, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
         .tool-badge-ibkr { background: rgba(255, 152, 0, 0.25); color: #ffb74d; border: 1px solid rgba(255, 152, 0, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
         .tool-badge-usmart { background: rgba(0, 200, 83, 0.25); color: #00e676; border: 1px solid rgba(0, 200, 83, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
 
         .tool-desc { font-size: 12.5px; color: #9db2c6; line-height: 1.5; margin-bottom: 10px; }
         
-        /* 福利高亮框 */
         .tool-welfare-tv { background: #1e222d; border-left: 3px solid #2962ff; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
         .tool-welfare-ibkr { background: #1e222d; border-left: 3px solid #ffa726; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
         .tool-welfare-usmart { background: #1e222d; border-left: 3px solid #00e676; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
 
-        /* 强转化行动按钮 */
         .tool-btn-tv { display: block; width: 100%; background: #2962ff; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(41, 98, 255, 0.35); }
         .tool-btn-tv:hover { background: #1e53e5; }
 
@@ -57,4 +44,148 @@
 
         /* 资料免费领取板块 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
-        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff;
+        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
+        .btn-submit:hover { background: #0052cc; }
+
+        /* 二次访问/快捷获取通道样式 */
+        .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
+        .btn-group { display: flex; gap: 8px; margin-top: 8px; }
+        
+        .btn-code { flex: 1; padding: 10px 4px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; text-align: center; }
+        .code-display { background: #fff; color: #d97706; border: 1px dashed #f59e0b; padding: 8px; border-radius: 6px; font-weight: bold; font-family: monospace; font-size: 13px; display: none; text-align: center; }
+        .btn-direct { flex: 1; padding: 10px 4px; background: #1677ff; color: #fff; text-align: center; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 12px; line-height: 1.5; }
+
+        /* 随喜赞助二维码区域（底部低调展示） */
+        .sponsor-box { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 14px 12px; margin-top: 18px; margin-bottom: 14px; }
+        .sponsor-title { font-size: 13px; font-weight: 600; color: #666; margin-bottom: 10px; }
+        .qr-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .qr-item { flex: 1; min-width: 130px; max-width: 150px; background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .qr-item img { width: 100%; height: auto; border-radius: 6px; display: block; }
+        .qr-label { font-size: 11px; font-weight: 600; margin-top: 6px; }
+        .qr-wx { color: #07c160; }
+        .qr-zfb { color: #1677ff; }
+
+        .footer-tips { font-size: 11px; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 1. 顶部头像与简介 -->
+        <img src="avatar.jpg" class="avatar" alt="浑水摸鱼清源" onerror="this.src='wx.jpg'">
+        <h1>浑水摸鱼清源 🥤</h1>
+        <p class="subtitle">感谢大家一路以来的真金白银与信任！<br>投资是一场长坡厚雪的旅程，希望能陪伴大家喝着可乐慢慢变富。</p>
+        
+        <!-- 2. 微信号显示 -->
+        <div class="contact-box">
+            💬 交流 / 合作微信号：<span class="wechat-tag">MuddywatersUS</span>
+        </div>
+
+        <!-- 3. 【变现核心一】TradingView 推荐工具卡片 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">📈 自用看盘软件：TradingView</div>
+                <span class="tool-badge-tv">新客立减 $15</span>
+            </div>
+            <p class="tool-desc">
+                日常做 <b>Al Brooks 价格行为学</b> K 线结构标注、多周期图表对照与复盘的必备利器。
+            </p>
+            <div class="tool-welfare-tv">
+                💡 <b>粉丝专属福利</b>：通过专属通道注册，官方自动赠送 <b>$15 美元优惠券</b>。推荐选 <b>Essential 基础版</b>，抵扣后<b>相当于首月免费体验</b>！
+            </div>
+            <a href="https://cn.tradingview.com/?aff_id=1172199" target="_blank" rel="noopener noreferrer" class="tool-btn-tv">
+                🚀 领取 $15 优惠并体验 TradingView →
+            </a>
+            <div class="tool-disclaimer">
+                * 官方合作专属链接，首单立享折扣，本站可获少许维护支持。
+            </div>
+        </div>
+
+        <!-- 4. 【变现核心二】盈透证券 (IBKR) 券商卡片 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🌐 专业美股券商：盈透证券 (IBKR)</div>
+                <span class="tool-badge-ibkr">全球顶配 · 期权首选</span>
+            </div>
+            <p class="tool-desc">
+                主打全球资产配置、美股正股与期权交易的专业级经纪商，资金安全、费率极低。
+            </p>
+            <div class="tool-welfare-ibkr">
+                💡 <b>开户通道说明</b>：使用官方推荐链接注册开户并入金，可享受官方标准的开户奖励与长期低利率融资权限。
+            </div>
+            <a href="https://ibkr.com/referral/yi8087" target="_blank" rel="noopener noreferrer" class="tool-btn-ibkr">
+                🏦 前往盈透证券 (IBKR) 官方开户 →
+            </a>
+            <div class="tool-disclaimer">
+                * 官方推荐返佣通道，入金交易符合条件后双方均可获益。
+            </div>
+        </div>
+
+        <!-- 5. 【变现核心三】新加坡盈立证券 (uSmart) 卡片 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🦁 新加坡盈立证券 (uSmart)</div>
+                <span class="tool-badge-usmart">开户简单 · 迎新礼包</span>
+            </div>
+            <p class="tool-desc">
+                新加坡持牌合规券商，支持港美股/新股交易。界面极易上手，出入金顺畅。
+            </p>
+            <div class="tool-welfare-usmart">
+                💡 <b>专属迎新福利</b>：使用邀请码 <b>sxro</b> 注册开户并首入金，可直接领取官方专属高额股票代金券/免费美股奖励！
+            </div>
+            <a href="https://m.usmartsg66.com/promo/overseas/bonus.html?ICode=sxro&langType=1&Id=" target="_blank" rel="noopener noreferrer" class="tool-btn-usmart">
+                🎁 领取 uSmart 迎新礼包并开户 →
+            </a>
+            <div class="tool-disclaimer">
+                * 官方合作活动链接，新客满足首入金条件即可领取奖励。
+            </div>
+        </div>
+
+        <!-- 6. 资料免费领取板块 -->
+        <div class="notice">
+            📌 <strong>Al Brooks 资料免费领取说明：</strong><br>
+            1. B 站充电已关闭，全套价格行为学资料已完全免费开放。<br>
+            2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
+        </div>
+
+        <!-- 7. 腾讯文档表单按钮 -->
+        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
+        
+        <!-- 8. 二次访问/快捷获取通道 -->
+        <div class="quick-access">
+            📌 <strong>二次访问 / 没记下提取码？</strong><br>若你之前已经登记过，无需重复填表，直接点击获取：
+            <div class="btn-group" id="accessGroup">
+                <button onclick="showCode()" class="btn-code" id="btnCode">🔑 点击查看提取码</button>
+                <div class="code-display" id="codeText">提取码：PRIC</div>
+                <a href="https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw" target="_blank" class="btn-direct">🚀 直达百度网盘</a>
+            </div>
+        </div>
+
+        <!-- 9. 随喜赞助（图片二维码正常展示） -->
+        <div class="sponsor-box">
+            <div class="sponsor-title">☕ 随喜赞助与创作支持</div>
+            <div class="qr-group">
+                <div class="qr-item">
+                    <img src="wx.jpg" alt="微信支付" onerror="this.src='../wx.jpg'">
+                    <div class="qr-label qr-wx">微信支付</div>
+                </div>
+                <div class="qr-item">
+                    <img src="zfb.jpg" alt="支付宝支付" onerror="this.src='../zfb.jpg'">
+                    <div class="qr-label qr-zfb">支付宝支付</div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-tips">赞助纯属自愿，无论是否打赏均可免费领取资料</p>
+    </div>
+
+    <!-- 交互脚本 -->
+    <script>
+    function showCode() {
+        const btn = document.getElementById('btnCode');
+        const textDiv = document.getElementById('codeText');
+        btn.style.display = 'none';
+        textDiv.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
