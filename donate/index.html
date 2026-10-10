@@ -8,59 +8,88 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f9; color: #333; display: flex; justify-content: center; padding: 30px 15px; min-height: 100vh; }
         .card { background: #fff; max-width: 460px; width: 100%; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); padding: 28px 20px; text-align: center; }
-        
-        /* 纯 CSS 完美替代头像，永不白屏 */
         .avatar-box { width: 72px; height: 72px; background: linear-gradient(135deg, #2962ff, #00c853); border-radius: 50%; margin: 0 auto 12px auto; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 3px solid #fff; }
-        
         h1 { font-size: 20px; font-weight: 700; margin-bottom: 6px; color: #111; }
         p.subtitle { color: #666; font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
-        
-        /* 交流微信号样式 */
         .contact-box { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 8px 14px; font-size: 13px; color: #475569; margin-bottom: 16px; display: inline-block; }
         .wechat-tag { background: #e2e8f0; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: bold; color: #0f172a; margin-left: 4px; }
-
-        /* 随喜赞助提示区（安全替代本地二维码，避免路径错误） */
-        .sponsor-box { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 16px; margin-bottom: 18px; text-align: center; }
-        .sponsor-title { font-size: 13px; font-weight: 600; color: #444; margin-bottom: 8px; }
-        .sponsor-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 12px; }
-        .sponsor-btn-group { display: flex; gap: 10px; justify-content: center; }
-        .sp-btn { flex: 1; padding: 8px 0; border-radius: 6px; font-size: 12px; font-weight: bold; text-decoration: none; border: 1px solid #ddd; background: #fff; color: #333; }
-        .sp-wx { color: #07c160; border-color: #07c16033; background: #07c16008; }
-        .sp-zfb { color: #1677ff; border-color: #1677ff33; background: #1677ff08; }
-
-        /* --- 变现核心推荐卡片样式 --- */
+        
         .tool-card { background: #131722; border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; text-align: left; color: #d1d4dc; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #2a2e39; }
         .tool-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-        .tool-title { font-size: 15px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 6px; }
-        
-        .tool-badge-tv { background: rgba(41, 98, 255, 0.25); color: #4b89ff; border: 1px solid rgba(41, 98, 255, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
-        .tool-badge-ibkr { background: rgba(255, 152, 0, 0.25); color: #ffb74d; border: 1px solid rgba(255, 152, 0, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
-        .tool-badge-usmart { background: rgba(0, 200, 83, 0.25); color: #00e676; border: 1px solid rgba(0, 200, 83, 0.5); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
-
+        .tool-title { font-size: 15px; font-weight: 700; color: #fff; }
+        .tool-badge-tv { background: rgba(41, 98, 255, 0.25); color: #4b89ff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+        .tool-badge-ibkr { background: rgba(255, 152, 0, 0.25); color: #ffb74d; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+        .tool-badge-usmart { background: rgba(0, 200, 83, 0.25); color: #00e676; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
         .tool-desc { font-size: 12.5px; color: #9db2c6; line-height: 1.5; margin-bottom: 10px; }
+        .tool-welfare { background: #1e222d; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
         
-        .tool-welfare-tv { background: #1e222d; border-left: 3px solid #2962ff; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
-        .tool-welfare-ibkr { background: #1e222d; border-left: 3px solid #ffa726; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
-        .tool-welfare-usmart { background: #1e222d; border-left: 3px solid #00e676; padding: 9px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 12px; line-height: 1.5; }
+        .tool-btn-tv { display: block; width: 100%; background: #2962ff; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; }
+        .tool-btn-ibkr { display: block; width: 100%; background: #f57c00; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; }
+        .tool-btn-usmart { display: block; width: 100%; background: #00c853; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; }
 
-        .tool-btn-tv { display: block; width: 100%; background: #2962ff; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(41, 98, 255, 0.35); }
-        .tool-btn-tv:hover { background: #1e53e5; }
-
-        .tool-btn-ibkr { display: block; width: 100%; background: #f57c00; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(245, 124, 0, 0.35); }
-        .tool-btn-ibkr:hover { background: #e65100; }
-
-        .tool-btn-usmart { display: block; width: 100%; background: #00c853; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(0, 200, 83, 0.35); }
-        .tool-btn-usmart:hover { background: #00a844; }
-
-        .tool-disclaimer { font-size: 10px; color: #787b86; margin-top: 8px; text-align: center; }
-
-        /* 资料免费领取板块 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
-        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
-        .btn-submit:hover { background: #0052cc; }
-
-        /* 二次访问/快捷获取通道样式 */
-        .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
-        .btn-group { display: flex; gap: 8px; margin-top: 8px; }
+        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; text-align: center; }
+        .footer-tips { font-size: 11px; color: #999; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar-box">🥤</div>
+        <h1>浑水摸鱼清源</h1>
+        <p class="subtitle">投资是一场长坡厚雪的旅程，希望能陪伴大家喝着可乐慢慢变富。</p>
         
-        .btn-code { flex: 1; padding:
+        <div class="contact-box">
+            💬 交流 / 合作微信号：<span class="wechat-tag">MuddywatersUS</span>
+        </div>
+
+        <!-- TradingView -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">📈 推荐看盘软件：TradingView</div>
+                <span class="tool-badge-tv">立减 $15</span>
+            </div>
+            <p class="tool-desc">K线复盘、Al Brooks 价格行为学形态标注必备工具。</p>
+            <div class="tool-welfare">💡 专属福利：新用户通过专属通道注册，自动赠送 $15 优惠券，相当于首月免费！</div>
+            <a href="https://cn.tradingview.com/?aff_id=1172199" target="_blank" rel="noopener noreferrer" class="tool-btn-tv">
+                🚀 领取 $15 优惠并注册 TradingView →
+            </a>
+        </div>
+
+        <!-- 盈透证券 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🌐 专业美股券商：盈透证券 (IBKR)</div>
+                <span class="tool-badge-ibkr">期权首选</span>
+            </div>
+            <p class="tool-desc">主打全球资产配置、美股正股与期权交易的专业级经纪商。</p>
+            <div class="tool-welfare">💡 开户说明：使用推荐链接注册开户并入金，享受官方标准开户奖励。</div>
+            <a href="https://ibkr.com/referral/yi8087" target="_blank" rel="noopener noreferrer" class="tool-btn-ibkr">
+                🏦 前往盈透证券 (IBKR) 官方开户 →
+            </a>
+        </div>
+
+        <!-- 盈立证券 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🦁 新加坡盈立证券 (uSmart)</div>
+                <span class="tool-badge-usmart">迎新礼包</span>
+            </div>
+            <p class="tool-desc">新加坡持牌合规券商，支持港美股/新股交易，出入金顺畅。</p>
+            <div class="tool-welfare">💡 专属福利：使用邀请码 <b>sxro</b> 注册开户并首入金，领取高额股票代金券！</div>
+            <a href="https://m.usmartsg66.com/promo/overseas/bonus.html?ICode=sxro&langType=1&Id=" target="_blank" rel="noopener noreferrer" class="tool-btn-usmart">
+                🎁 领取 uSmart 迎新礼包并开户 →
+            </a>
+        </div>
+
+        <!-- 资料领取 -->
+        <div class="notice">
+            📌 <strong>Al Brooks 资料领取说明：</strong><br>
+            全套价格行为学资料已完全免费开放，点击下方按钮填写入门登记后直接获取网盘链接与提取码。
+        </div>
+
+        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 填写登记·免费领取资料</a>
+        
+        <p class="footer-tips">欢迎关注 B 站同名 UP 主，长坡厚雪，理性投资</p>
+    </div>
+</body>
+</html>
