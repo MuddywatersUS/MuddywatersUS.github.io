@@ -40,4 +40,96 @@
         .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
         .btn-group { display: flex; gap: 8px; margin-top: 8px; }
         .btn-code { flex: 1; padding: 10px 4px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; text-align: center; }
-        .code-display { background: #fff; color: #d97706; border: 1px dashed #f59e0b; padding: 8px; border-radius:
+        .code-display { background: #fff; color: #d97706; border: 1px dashed #f59e0b; padding: 8px; border-radius: 6px; font-weight: bold; font-family: monospace; font-size: 13px; display: none; text-align: center; flex: 1; }
+        .btn-direct { flex: 1; padding: 10px 4px; background: #1677ff; color: #fff; text-align: center; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 12px; line-height: 1.5; }
+
+        .footer-tips { font-size: 11px; color: #999; margin-top: 18px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 头像图片 -->
+        <div class="avatar-box">
+            <img src="avatar.jpg" alt="头像">
+        </div>
+        
+        <h1>浑水摸鱼清源</h1>
+        <p class="subtitle">投资是一场长坡厚雪的旅程，希望能陪伴大家喝着可乐慢慢变富。</p>
+        
+        <div class="contact-box">
+            💬 交流 / 合作微信号：<span class="wechat-tag">MuddywatersUS</span>
+        </div>
+
+        <!-- 1. TradingView -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">📈 推荐看盘软件：TradingView</div>
+                <span class="tool-badge-tv">立减 $15</span>
+            </div>
+            <p class="tool-desc">K线复盘、Al Brooks 价格行为学形态标注必备工具。</p>
+            <div class="tool-welfare">💡 专属福利：新用户通过专属通道注册，自动赠送 $15 优惠券，相当于首月免费！</div>
+            <a href="https://cn.tradingview.com/?aff_id=1172199" target="_blank" rel="noopener noreferrer" class="tool-btn-tv">
+                🚀 领取 $15 优惠并注册 TradingView →
+            </a>
+        </div>
+
+        <!-- 2. 盈透证券 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🌐 专业美股券商：盈透证券 (IBKR)</div>
+                <span class="tool-badge-ibkr">期权首选</span>
+            </div>
+            <p class="tool-desc">主打全球资产配置、美股正股与期权交易的专业级经纪商。</p>
+            <div class="tool-welfare">💡 开户说明：注册开户并首入金，享受官方标准开户奖励。</div>
+            <a href="https://ibkr.com/referral/yi8087" target="_blank" rel="noopener noreferrer" class="tool-btn-ibkr">
+                🏦 前往盈透证券 (IBKR) 官方开户 →
+            </a>
+        </div>
+
+        <!-- 3. 盈立证券 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-title">🦁 新加坡盈立证券 (uSmart)</div>
+                <span class="tool-badge-usmart">迎新礼包</span>
+            </div>
+            <p class="tool-desc">新加坡持牌合规券商，支持港美股/新股交易，出入金顺畅。</p>
+            <div class="tool-welfare">💡 专属福利：注册开户并首入金，即可领取高额股票代金券！</div>
+            <a href="https://m.usmartsg66.com/promo/overseas/bonus.html?ICode=sxro&langType=1&Id=" target="_blank" rel="noopener noreferrer" class="tool-btn-usmart">
+                🎁 领取 uSmart 迎新礼包并开户 →
+            </a>
+        </div>
+
+        <!-- 资料免费领取板块 -->
+        <div class="notice">
+            📌 <strong>Al Brooks 资料免费领取说明：</strong><br>
+            1. B 站充电已关闭，全套价格行为学资料已完全免费开放。<br>
+            2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
+        </div>
+
+        <!-- 腾讯文档表单按钮 -->
+        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
+        
+        <!-- 二次访问/快捷获取通道 -->
+        <div class="quick-access">
+            📌 <strong>二次访问 / 没记下提取码？</strong><br>若你之前已经登记过，无需重复填表，直接点击获取：
+            <div class="btn-group" id="accessGroup">
+                <button onclick="showCode()" class="btn-code" id="btnCode">🔑 点击查看提取码</button>
+                <div class="code-display" id="codeText">提取码：PRIC</div>
+                <a href="https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw" target="_blank" class="btn-direct">🚀 直达百度网盘</a>
+            </div>
+        </div>
+
+        <p class="footer-tips">欢迎关注 B 站同名 UP 主，长坡厚雪，理性投资</p>
+    </div>
+
+    <!-- 交互脚本 -->
+    <script>
+    function showCode() {
+        const btn = document.getElementById('btnCode');
+        const textDiv = document.getElementById('codeText');
+        btn.style.display = 'none';
+        textDiv.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
