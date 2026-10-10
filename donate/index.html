@@ -26,6 +26,17 @@
         .qr-wx { color: #07c160; }
         .qr-zfb { color: #1677ff; }
 
+        /* TradingView 专属卡片美化样式 */
+        .tv-card { background: #131722; border-radius: 12px; padding: 18px 16px; margin-bottom: 20px; text-align: left; color: #d1d4dc; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #2a2e39; }
+        .tv-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .tv-title { font-size: 15px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 6px; }
+        .tv-badge { background: rgba(41, 98, 255, 0.2); color: #2962ff; border: 1px solid rgba(41, 98, 255, 0.4); font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .tv-desc { font-size: 12.5px; color: #9db2c6; line-height: 1.5; margin-bottom: 12px; }
+        .tv-welfare { background: #1e222d; border-left: 3px solid #2962ff; padding: 10px 12px; border-radius: 4px; font-size: 12px; color: #e0e3eb; margin-bottom: 14px; line-height: 1.5; }
+        .tv-btn { display: block; width: 100%; background: #2962ff; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(41, 98, 255, 0.3); }
+        .tv-btn:hover { background: #1e53e5; }
+        .tv-disclaimer { font-size: 10.5px; color: #787b86; margin-top: 10px; text-align: center; }
+
         /* 说明与主按钮 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
         .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
@@ -71,6 +82,26 @@
             </div>
         </div>
 
+        <!-- 3. TradingView 推荐工具板块（精美嵌入） -->
+        <div class="tv-card">
+            <div class="tv-header">
+                <div class="tv-title">📈 自用看盘软件：TradingView</div>
+                <span class="tv-badge">新客首单立减 $15</span>
+            </div>
+            <p class="tv-desc">
+                日常做 <b>Al Brooks 价格行为学</b> K 线结构标注、多周期图表对照与策略复盘所使用的工具[cite: 7]。
+            </p>
+            <div class="tv-welfare">
+                💡 <b>粉丝福利说明</b>：新用户通过专属通道注册，官方自动赠送 <b>$15 美元优惠券</b>[cite: 3]。推荐选择 <b>Essential 基础版</b>（按月 $14.95/月）[cite: 7]，抵扣后<b>相当于首月免费体验</b>！
+            </div>
+            <a href="https://cn.tradingview.com/?aff_id=1172199" target="_blank" rel="noopener noreferrer" class="tv-btn">
+                🚀 领取 $15 优惠并体验 TradingView →
+            </a>
+            <div class="tv-disclaimer">
+                * 声明：通过此链接购买可获得官方折扣，本站可获得少许维护佣金，感谢支持。
+            </div>
+        </div>
+
         <!-- 资料免费领取板块 -->
         <div class="notice">
             📌 <strong>Al Brooks 资料免费领取说明：</strong><br>
@@ -78,10 +109,10 @@
             2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
         </div>
 
-        <!-- 3. 新腾讯文档表单链接 -->
+        <!-- 4. 新腾讯文档表单链接 -->
         <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
         
-        <!-- 4. 二次访问/快捷获取通道 -->
+        <!-- 5. 二次访问/快捷获取通道 -->
         <div class="quick-access">
             📌 <strong>二次访问 / 没记下提取码？</strong><br>若你之前已经登记过，无需重复填表，直接点击获取：
             <div class="btn-group" id="accessGroup">
