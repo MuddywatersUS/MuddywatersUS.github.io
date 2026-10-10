@@ -14,6 +14,7 @@
         .contact-box { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 8px 14px; font-size: 13px; color: #475569; margin-bottom: 16px; display: inline-block; }
         .wechat-tag { background: #e2e8f0; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: bold; color: #0f172a; margin-left: 4px; }
         
+        /* 变现核心卡片样式 */
         .tool-card { background: #131722; border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; text-align: left; color: #d1d4dc; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #2a2e39; }
         .tool-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
         .tool-title { font-size: 15px; font-weight: 700; color: #fff; }
@@ -27,8 +28,17 @@
         .tool-btn-ibkr { display: block; width: 100%; background: #f57c00; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; }
         .tool-btn-usmart { display: block; width: 100%; background: #00c853; color: #fff; text-align: center; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 0; border-radius: 8px; }
 
+        /* 底部领取说明与按钮样式 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
-        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; text-align: center; }
+        .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; text-align: center; box-shadow: 0 4px 12px rgba(0,102,255,0.2); }
+        
+        /* 二次访问互动通道 */
+        .quick-access { margin-top: 16px; padding: 12px; background: #fffbe6; border: 1px solid #ffe58f; border-radius: 10px; font-size: 12px; color: #d48800; text-align: left; line-height: 1.5; }
+        .btn-group { display: flex; gap: 8px; margin-top: 8px; }
+        .btn-code { flex: 1; padding: 10px 4px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 12px; text-align: center; }
+        .code-display { background: #fff; color: #d97706; border: 1px dashed #f59e0b; padding: 8px; border-radius: 6px; font-weight: bold; font-family: monospace; font-size: 13px; display: none; text-align: center; flex: 1; }
+        .btn-direct { flex: 1; padding: 10px 4px; background: #1677ff; color: #fff; text-align: center; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 12px; line-height: 1.5; }
+
         .footer-tips { font-size: 11px; color: #999; margin-top: 15px; }
     </style>
 </head>
@@ -42,7 +52,7 @@
             💬 交流 / 合作微信号：<span class="wechat-tag">MuddywatersUS</span>
         </div>
 
-        <!-- TradingView -->
+        <!-- 1. TradingView -->
         <div class="tool-card">
             <div class="tool-header">
                 <div class="tool-title">📈 推荐看盘软件：TradingView</div>
@@ -55,7 +65,7 @@
             </a>
         </div>
 
-        <!-- 盈透证券 -->
+        <!-- 2. 盈透证券 -->
         <div class="tool-card">
             <div class="tool-header">
                 <div class="tool-title">🌐 专业美股券商：盈透证券 (IBKR)</div>
@@ -68,7 +78,7 @@
             </a>
         </div>
 
-        <!-- 盈立证券 -->
+        <!-- 3. 盈立证券 -->
         <div class="tool-card">
             <div class="tool-header">
                 <div class="tool-title">🦁 新加坡盈立证券 (uSmart)</div>
@@ -81,15 +91,40 @@
             </a>
         </div>
 
-        <!-- 资料领取 -->
+        <!-- 资料免费领取板块 -->
         <div class="notice">
-            📌 <strong>Al Brooks 资料领取说明：</strong><br>
-            全套价格行为学资料已完全免费开放，点击下方按钮填写入门登记后直接获取网盘链接与提取码。
+            📌 <strong>Al Brooks 资料免费领取说明：</strong><br>
+            1. B 站充电已关闭，全套价格行为学资料已完全免费开放。<br>
+            2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
         </div>
 
-        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 填写登记·免费领取资料</a>
+        <!-- 腾讯文档表单按钮 -->
+        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
         
+        <!-- 二次访问/快捷获取通道（含点击显示提取码脚本） -->
+        <div class="quick-access">
+            📌 <strong>二次访问 / 没记下提取码？</strong><br>若你之前已经登记过，无需重复填表，直接点击获取：
+            <div class="btn-group" id="accessGroup">
+                <!-- 点击后按钮变身显示提取码 -->
+                <button onclick="showCode()" class="btn-code" id="btnCode">🔑 点击查看提取码</button>
+                <!-- 提取码显示区域（默认隐藏） -->
+                <div class="code-display" id="codeText">提取码：PRIC</div>
+                <!-- 直达网盘按钮 -->
+                <a href="https://pan.baidu.com/s/1WhCzRT3WtbghQa2mfvhuNw" target="_blank" class="btn-direct">🚀 直达百度网盘</a>
+            </div>
+        </div>
+
         <p class="footer-tips">欢迎关注 B 站同名 UP 主，长坡厚雪，理性投资</p>
     </div>
+
+    <!-- 交互脚本 -->
+    <script>
+    function showCode() {
+        const btn = document.getElementById('btnCode');
+        const textDiv = document.getElementById('codeText');
+        btn.style.display = 'none';
+        textDiv.style.display = 'block';
+    }
+    </script>
 </body>
 </html>
