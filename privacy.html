@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>隐私政策 · yt-bridge</title>
+<style>
+body{max-width:720px;margin:0 auto;padding:48px 20px 80px;background:#f7f7f5;color:#1a1a1a;font:16px/1.75 -apple-system,'Segoe UI','PingFang SC',sans-serif}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:17px;margin:30px 0 8px;padding-top:18px;border-top:1px solid #e2e2de}
+h2:first-of-type{border-top:0;padding-top:0}
+.sub{color:#6b6b6b;font-size:14px;margin-bottom:30px}
+ul{padding-left:22px}li{margin:5px 0}
+code{background:#ecece8;padding:2px 5px;border-radius:4px;font-size:13px;word-break:break-all}
+a{color:#0b5cad}
+.en{margin-top:56px;padding-top:26px;border-top:2px solid #d8d8d2}
+footer{margin-top:56px;color:#8a8a85;font-size:13px}
+</style>
+</head>
+<body>
+<h1>隐私政策</h1>
+<div class='sub'>适用应用：yt-bridge　·　最后更新：2026 年 11 月 3 日</div>
+
+<h2>1. 这是什么</h2>
+<p>yt-bridge 是仅运行在开发者本人 Windows 电脑上的个人自动化脚本，用于整理本人 YouTube「稍后观看」列表中的视频并生成本地观看摘要，供本人筛选归档。它不对外开放注册，不提供在线服务，也未上架任何应用商店。</p>
+
+<h2>2. 访问哪些 Google 用户数据</h2>
+<p>仅在账号本人明确授权后，通过 Google OAuth 2.0 以只读权限访问：</p>
+<ul>
+<li>授权范围：<code>https://www.googleapis.com/auth/youtube.readonly</code>（只读）</li>
+<li>读取内容：本人 YouTube 账号「稍后观看」列表中的视频 ID、标题、频道名称、时长</li>
+</ul>
+<p>不读取、不修改、不删除任何其他 YouTube 数据；不上传视频、不改动播放列表、不读取私信、评论或订阅信息。</p>
+
+<h2>3. 数据用途</h2>
+<p>仅用于在本人电脑上生成本地视频摘要清单，帮助本人决定是否下载归档。不用于广告、用户画像、转售或任何第三方用途。</p>
+
+<h2>4. 存储与保留</h2>
+<ul>
+<li>所有数据仅保存在开发者本人的本地计算机（本地文本 / JSON 文件）。</li>
+<li>本工具没有服务端、没有云数据库，不上传任何数据到互联网。</li>
+<li>OAuth 刷新令牌同样只存于本地，保存在仅当前系统用户可读的文件中。</li>
+</ul>
+
+<h2>5. 共享与转让</h2>
+<p>不与任何第三方共享、出售、出租或转让 Google 用户数据；不使用 Google 用户数据训练任何机器学习模型。</p>
+
+<h2>6. 撤销授权与删除数据</h2>
+<p>可随时访问 <a href='https://myaccount.google.com/permissions'>Google 账号权限页</a> 撤销本应用访问权限。撤销后本工具立即无法读取任何数据；删除本地令牌与清单文件即完成全部清除。</p>
+
+<h2>7. 政策遵从</h2>
+<p>本工具对 Google API 所获数据的处理遵循 <a href='https://developers.google.com/terms/api-services-user-data-policy'>Google API Services User Data Policy</a>，包括其中 Limited Use 要求。</p>
+
+<h2>8. 联系方式</h2>
+<p>通过 GitHub 联系：<a href='https://github.com/MuddywatersUS'>github.com/MuddywatersUS</a></p>
+
+<div class='en'>
+<h1>Privacy Policy</h1>
+<div class='sub'>App: yt-bridge　·　Last updated: November 3, 2026</div>
+
+<h2>1. What this is</h2>
+<p>yt-bridge is a personal automation script running only on the developer's own Windows computer. It organizes videos in the developer's own YouTube Watch Later list and produces a local summary for personal triage. It has no public sign-up, no online service, and is not distributed through any app store.</p>
+
+<h2>2. Google user data accessed</h2>
+<p>Only with the account owner's consent, and only read-only, the app accesses:</p>
+<ul>
+<li>Scope: <code>https://www.googleapis.com/auth/youtube.readonly</code></li>
+<li>Data: video IDs, titles, channel names and durations from the owner's own Watch Later playlist</li>
+</ul>
+<p>No other YouTube data is read, modified or deleted. The app does not upload videos, modify playlists, or read messages, comments or subscriptions.</p>
+
+<h2>3. How data is used</h2>
+<p>Solely to build a local summary on the owner's computer so the owner can decide whether to archive a video. No advertising, profiling, resale or third-party use.</p>
+
+<h2>4. Storage and retention</h2>
+<ul>
+<li>All data stays on the developer's local computer as local text/JSON files.</li>
+<li>No server and no cloud database; nothing is uploaded.</li>
+<li>The OAuth refresh token is stored only locally, readable only by the local OS user.</li>
+</ul>
+
+<h2>5. Sharing</h2>
+<p>Google user data is never shared, sold, rented or transferred to any third party, and is never used to train machine-learning models.</p>
+
+<h2>6. Revoking access and deleting data</h2>
+<p>Access can be revoked anytime at the <a href='https://myaccount.google.com/permissions'>Google Account permissions page</a>. After revocation the app can no longer read any data; deleting the local token and summary files removes everything.</p>
+
+<h2>7. Compliance</h2>
+<p>Use of Google API data complies with the <a href='https://developers.google.com/terms/api-services-user-data-policy'>Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>8. Contact</h2>
+<p><a href='https://github.com/MuddywatersUS'>github.com/MuddywatersUS</a></p>
+</div>
+
+<footer>yt-bridge · personal local tool · no server, no tracking</footer>
+</body>
+</html>
