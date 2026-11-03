@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>yt-bridge · 个人 YouTube 稍后观看归档助手</title>
+<style>
+body{max-width:680px;margin:0 auto;padding:64px 20px 80px;background:#f7f7f5;color:#1a1a1a;font:16px/1.8 -apple-system,'Segoe UI','PingFang SC',sans-serif}
+h1{font-size:32px;margin:0 0 10px;letter-spacing:-.5px}
+.tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7a7a74;margin-bottom:14px}
+.lead{font-size:17px;color:#444;margin:0 0 36px}
+h2{font-size:17px;margin:30px 0 8px}
+ul{padding-left:22px}li{margin:5px 0}
+code{background:#ecece8;padding:2px 5px;border-radius:4px;font-size:13px;word-break:break-all}
+a{color:#0b5cad}
+.card{background:#fff;border:1px solid #e4e4df;border-radius:10px;padding:20px 22px;margin:24px 0}
+.card h2{margin-top:0}
+footer{margin-top:52px;color:#8a8a85;font-size:13px;border-top:1px solid #e2e2de;padding-top:18px}
+</style>
+</head>
+<body>
+<div class='tag'>Personal tool</div>
+<h1>yt-bridge</h1>
+<p class='lead'>一个只在自己电脑上运行的个人自动化工具：读取自己的 YouTube「稍后观看」列表，生成本地摘要，用来决定哪些视频值得下载归档。</p>
+
+<div class='card'>
+<h2>它做什么</h2>
+<ul>
+<li>经账号本人授权后，以只读方式读取本人 YouTube「稍后观看」列表</li>
+<li>在本机生成视频清单与摘要，方便快速筛选</li>
+<li>对筛选出的视频做本地下载与整理归档</li>
+</ul>
+</div>
+
+<div class='card'>
+<h2>它不做什么</h2>
+<ul>
+<li>不对外提供服务，不开放注册，没有任何在线账号体系</li>
+<li>不上传、不修改、不删除你的任何 YouTube 内容</li>
+<li>不收集、不共享、不出售任何数据；没有服务器，没有云数据库，也没有统计埋点</li>
+</ul>
+</div>
+
+<h2>使用的 Google 权限</h2>
+<p>仅 <code>https://www.googleapis.com/auth/youtube.readonly</code>（YouTube 只读）。数据只保留在本机，可随时在 <a href='https://myaccount.google.com/permissions'>Google 账号权限页</a> 撤销授权。</p>
+
+<h2>隐私</h2>
+<p>完整说明见 <a href='/privacy.html'>隐私政策 / Privacy Policy</a>。</p>
+
+<h2>联系</h2>
+<p><a href='https://github.com/MuddywatersUS'>github.com/MuddywatersUS</a></p>
+
+<footer>yt-bridge · runs locally only · no server, no tracking</footer>
+</body>
+</html>
